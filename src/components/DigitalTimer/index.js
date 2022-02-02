@@ -7,7 +7,7 @@ class DigitalTimer extends Component {
   state = {start: false, count: 25, counter: 0}
 
   componentWillUnmount() {
-    this.clearTimerInterval()
+    this.clearTimeInterval()
   }
 
   clearTimeInterval = () => {
@@ -24,7 +24,7 @@ class DigitalTimer extends Component {
     const isTimeCompleted = count * 60 === counter
 
     if (isTimeCompleted) {
-      this.clearTimerInterval()
+      this.clearTimeInterval()
       this.setState({start: false})
     } else {
       this.setState(prevState => ({
